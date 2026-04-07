@@ -31,7 +31,7 @@ export default function HomePage() {
         const data = await res.json();
 
         if (!data.success) {
-          throw new Error(data.message || "Failed to fetch products");
+          throw new Error(data.message);
         }
 
         setProducts(data.products);
